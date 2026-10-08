@@ -1,0 +1,134 @@
+.molecular {
+  position: relative;
+  height: 280vh;
+  background: #06080c;
+}
+.molecular__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+}
+.molecular-canvas {
+  position: absolute !important;
+  inset: 0;
+}
+.molecular__fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.molecular__shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(6, 8, 12, 0.85) 0%, rgba(6, 8, 12, 0.2) 45%, transparent 70%),
+    linear-gradient(180deg, #06080c 0%, transparent 18%, transparent 82%, #06080c 100%);
+}
+.molecular__overlay {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+}
+.molecular__title {
+  max-width: 620px;
+  opacity: 0;
+}
+.molecular__title .h-lg {
+  font-size: clamp(2.3rem, 5vw, 5.4rem);
+}
+.molecular__lines {
+  list-style: none;
+  margin: clamp(28px, 5vh, 56px) 0 0;
+  padding: 0;
+  max-width: 440px;
+}
+.molecular__lines li {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  opacity: 0;
+}
+.molecular__lines li .mono {
+  color: var(--cyan);
+  padding-top: 3px;
+}
+.molecular__lines p {
+  color: var(--text-2);
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+.molecular__card {
+  position: absolute;
+  right: var(--gutter);
+  bottom: clamp(48px, 10vh, 110px);
+  width: 300px;
+  padding: 22px 22px 18px;
+  border: 1px solid var(--line-strong);
+  background: rgba(8, 11, 16, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+}
+.molecular__card-name {
+  font-size: 2.2rem;
+  margin: 6px 0 16px;
+}
+.molecular__card dl {
+  margin: 0 0 14px;
+}
+.molecular__card dl div {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+.molecular__card dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.molecular__card-note {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .molecular__shade {
+    background:
+      linear-gradient(0deg, rgba(6, 8, 12, 0.92) 0%, rgba(6, 8, 12, 0.3) 50%, transparent 70%),
+      linear-gradient(180deg, #06080c 0%, transparent 18%);
+  }
+  .molecular__overlay {
+    justify-content: flex-end;
+    padding-bottom: 8vh;
+  }
+  .molecular__lines {
+    display: none;
+  }
+  .molecular__card {
+    top: calc(var(--nav-h) + 16px);
+    bottom: auto;
+    right: var(--gutter);
+    left: var(--gutter);
+    width: auto;
+    padding: 16px;
+  }
+  .molecular__card-name {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+  .molecular__card-note {
+    display: none;
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "solvane",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Solvane — a cinematic analytical chemistry experience (fictional brand).",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "build:strict": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "assets": "python scripts/generate_assets.py"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^8.17.10",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.14",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@types/three": "^0.169.0",
+    "@vitejs/plugin-react": "^4.3.3",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}

@@ -1,0 +1,51 @@
+export const APPLICATIONS = [
+  {
+    id: 'pharmaceuticals',
+    name: 'Pharmaceuticals',
+    line: 'Assay, related substances and dissolution — impurities quantified at fractions of a percent of the active ingredient.',
+    measures: ['Related substances', 'Assay', 'Dissolution'],
+    alt: 'Generated cross-section of a compressed tablet: thousands of granules with a single highlighted particle.',
+  },
+  {
+    id: 'biotechnology',
+    name: 'Biotechnology',
+    line: 'Intact mass, peptide mapping and charge variants — confirming a protein is exactly the molecule it should be.',
+    measures: ['Intact mass', 'Peptide maps', 'Charge variants'],
+    alt: 'Generated artwork of three helical protein ribbons drawn from fine strands.',
+  },
+  {
+    id: 'environmental',
+    name: 'Environmental Testing',
+    line: 'Pesticides, PFAS and inorganic anions in surface and drinking water, from ng/L to mg/L.',
+    measures: ['PFAS', 'Pesticides', 'Anions'],
+    alt: 'Generated interference contours on a water surface.',
+  },
+  {
+    id: 'food-beverage',
+    name: 'Food & Beverage',
+    line: 'Sugars, preservatives, caffeine and mycotoxins — what is on the label, and what should never be in the product.',
+    measures: ['Sugars', 'Preservatives', 'Mycotoxins'],
+    alt: 'Generated emulsion of droplets of many sizes under warm side light.',
+  },
+  {
+    id: 'semiconductors',
+    name: 'Semiconductors',
+    line: 'Trace ionic contamination in ultrapure water and process chemicals, where parts-per-trillion decide yield.',
+    measures: ['Trace anions', 'Metals', 'TOC in UPW'],
+    alt: 'Generated wafer map with a die grid and one flagged die.',
+  },
+  {
+    id: 'energy',
+    name: 'Energy',
+    line: 'Electrolyte composition and degradation products in lithium-ion cells; contaminants in fuels and lubricants.',
+    measures: ['Electrolytes', 'Degradation', 'Fuel additives'],
+    alt: 'Generated electrode lattice with ion paths crossing between layers.',
+  },
+  {
+    id: 'advanced-materials',
+    name: 'Advanced Materials',
+    line: 'Additives, residual monomers and degradation products in polymers, coatings and composites.',
+    measures: ['Additives', 'Monomers', 'Extractables'],
+    alt: 'Generated polycrystalline grain structure in dark cross-polarised tones.',
+  },
+];

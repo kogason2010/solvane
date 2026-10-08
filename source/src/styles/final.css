@@ -1,0 +1,44 @@
+.final {
+  position: relative;
+  min-height: 115vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(60% 50% at 50% 70%, rgba(50, 80, 150, 0.16), transparent 70%),
+    #06080c;
+  border-top: 1px solid var(--line);
+}
+.final__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.final__inner {
+  position: relative;
+  padding-top: 14vh;
+  padding-bottom: 30vh;
+  pointer-events: none;
+}
+.final__inner > * {
+  pointer-events: auto;
+}
+.final__eyebrow {
+  margin-bottom: 28px;
+  color: var(--cyan);
+}
+.final__title {
+  max-width: 12ch;
+}
+.final__sub {
+  font-size: clamp(1.5rem, 3vw, 2.8rem);
+  margin-top: 22px;
+  display: inline-block;
+}
+.final__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 44px;
+}

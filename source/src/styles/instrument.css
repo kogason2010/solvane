@@ -1,0 +1,128 @@
+.instrument {
+  position: relative;
+  height: 380vh;
+  background:
+    radial-gradient(70% 60% at 50% 55%, rgba(40, 60, 100, 0.22), transparent 70%),
+    #06080c;
+  border-top: 1px solid var(--line);
+}
+.instrument__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+}
+.instrument-canvas {
+  position: absolute !important;
+  inset: 0;
+}
+.instrument__shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(6, 8, 12, 0.9) 0%, transparent 28%, transparent 70%, rgba(6, 8, 12, 0.92) 100%);
+}
+.instrument__overlay {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding-top: calc(var(--nav-h) + 3vh);
+  padding-bottom: 4vh;
+  pointer-events: none;
+}
+.instrument__overlay > * {
+  pointer-events: auto;
+}
+.instrument__head .h-md {
+  max-width: 20ch;
+}
+.instrument__detail {
+  align-self: end;
+  margin-bottom: 28px;
+}
+.instrument__card {
+  max-width: 380px;
+  animation: infoIn 0.7s var(--ease);
+}
+.instrument__card .h-sm {
+  margin: 8px 0 10px;
+  font-size: 1.6rem;
+}
+.instrument__card p:last-child {
+  color: var(--text-2);
+  font-weight: 300;
+  font-size: 0.98rem;
+}
+.instrument__card-num {
+  color: var(--cyan);
+}
+.instrument__index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-top: 1px solid var(--line);
+}
+.instrument__index button {
+  width: 100%;
+  text-align: left;
+  padding: 14px 10px 0 0;
+  color: var(--dim);
+  font-size: 10.5px;
+  transition: color 0.4s;
+  position: relative;
+}
+.instrument__index button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--cyan), var(--violet));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s var(--ease);
+}
+.instrument__index button.is-past::before,
+.instrument__index button.is-active::before {
+  transform: scaleX(1);
+}
+.instrument__index button.is-past {
+  color: var(--muted);
+}
+.instrument__index button.is-active {
+  color: var(--text);
+}
+.instrument__index button:hover {
+  color: var(--text-2);
+}
+.instrument__index span {
+  display: block;
+  margin-bottom: 4px;
+}
+.instrument__note {
+  position: absolute;
+  right: var(--gutter);
+  top: calc(var(--nav-h) + 3vh + 8px);
+  font-size: 10px;
+}
+@media (max-width: 900px) {
+  .instrument {
+    height: 340vh;
+  }
+  .instrument__index {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 6px;
+  }
+  .instrument__note {
+    display: none;
+  }
+  .instrument__card .h-sm {
+    font-size: 1.3rem;
+  }
+}
